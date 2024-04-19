@@ -218,7 +218,8 @@ document.addEventListener("DOMContentLoaded", function () {
         hasilBayarElement.style.color = 'green'; // Teks berwarna hijau
         hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
       } else {
-        hasilBayarElement.textContent = 'Pembayaran sukses';
+        hasilBayarElement.innerHTML = 'Pembayaran sukses <br> Pesanan Segera Diantar';
+
         hasilBayarElement.style.color = 'green'; // Teks berwarna hijau
         hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
       }
