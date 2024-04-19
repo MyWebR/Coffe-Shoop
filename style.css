@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #1e40af;
+}
+
+/* header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: auto;
+  background-color: #eff6ff;
+}
+
+header p {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+/* content */
+.content {
+  margin: 15px;
+}
+
+/* pencarian */
+.cari {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -35px;
+}
+
+#cari {
+  color: #1e40af;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #1e40af;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+  outline: 2px solid #1e40af;
+  width: 100%;
+}
+
+#cari::placeholder {
+  color: gray;
+}
+/* end pencarian */
+
+/* kategori menu */
+.kategori-menu {
+  margin: 15px;
+}
+
+.menu {
+  margin: 0px -20px 0 -20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu img {
+  height: 40px;
+}
+
+.menu p {
+  color: #1e40af;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* semua */
+.semua {
+  cursor: pointer;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  background-color: white;
+  transition: background-color 0.3s ease;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+
+.semua:hover {
+  background-color: #e5e5e5;
+}
+
+/* minuman */
+.minuman {
+  cursor: pointer;
+  padding: 10px 12px 10px 12px;
+  border-radius: 10px;
+  background-color: white;
+  transition: background-color 0.3s ease;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+
+.minuman:hover {
+  background-color: #e5e5e5;
+}
+
+/* makanan */
+.makanan {
+  cursor: pointer;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  background-color: white;
+  transition: background-color 0.3s ease;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+
+.makanan:hover {
+  background-color: #e5e5e5;
+}
+
+/* snack */
+.snack {
+  cursor: pointer;
+  padding: 10px 23px 10px 23px;
+  border-radius: 10px;
+  background-color: white;
+  transition: background-color 0.3s ease;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+
+.snack:hover {
+  background-color: #e5e5e5;
+}
+
+/* end kategori menu */
+
+/* start product */
+/* ------------ */
+/* start minuman */
+.pembungkus {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.all-product {
+  border-radius: 0 0 10px 10px;
+  width: max-content; /* Atur lebar sesuai kebutuhan */
+  margin: 10px 5px; /* Atur margin dengan sedikit ruang di antara elemen */
+  background-color: white;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+
+.all-product img {
+  border-bottom: 1px solid;
+  border-color: #e5e5e5;
+  height: 160px;
+  object-fit: cover; /* Pastikan gambar tetap proporsional */
+}
+
+#nama-product {
+  color: black;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 160px;
+}
+
+#rp {
+  color: #737373;
+  margin-top: 0;
+  font-size: 12px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+/* end minuman */
+
+/* makanan */
+.produk-makanan img {
+  height: auto;
+  width: 165px;
+}
+/* ----------- */
+/* end product */
+
+/* space */
+.space {
+  margin-bottom: 100px;
+
+}
+
+/* navabr */
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+  background-color: #ffffff; /* Atur warna latar belakang sesuai kebutuhan */
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Atur bayangan bawah sesuai kebutuhan */
+}
+
+.navbar a {
+  text-decoration: none; /* Hapus dekorasi tautan */
+  padding: 10px; /* Atur padding sesuai kebutuhan */
+}
+
+.navbar img {
+  opacity: 0.6;
+  height: 35px;
+}
+
+.navbar img:hover {
+  opacity: 1;
+}
+
+.plus img {
+  margin-top: -50%;
+  margin-bottom: 20px;
+  opacity: 1;
+  height: 65px;
+  transition: transform 0.3s ease; /* Menambahkan efek transisi untuk rotasi */
+}
+
+.plus img:hover {
+     transform: rotate(180deg); /* Memutar gambar 20 derajat saat hover */
+}
+
+.menu .semua.active,
+.menu .minuman.active,
+.menu .makanan.active,
+.menu .snack.active {
+  background-color: #e5e5e5;
+}
