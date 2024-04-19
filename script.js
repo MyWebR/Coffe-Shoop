@@ -78,7 +78,43 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
   
-  // card
+  // card  
+document.addEventListener("DOMContentLoaded", function () {
+  var cardContainer = document.getElementById('card');
+  var uangBayarInput = document.getElementById('uang-bayar');
+  var hitungKembalianButton = document.getElementById('hitung-kembalian');
+  var hasilBayarContainer = document.getElementById('hasil-bayar');
+  var hasilBayarElement = document.getElementById('hasil');
+
+  hitungKembalianButton.addEventListener('click', function() {
+    // Mengambil total harga dari keranjang
+    var totalHarga = 0;
+    var hargaProduk = cardContainer.querySelectorAll('#rp');
+    hargaProduk.forEach(function(harga) {
+      var hargaString = harga.textContent.replace('Rp ', '').replace(',', '');
+      totalHarga += parseInt(hargaString);
+    });
+
+    // Mengambil jumlah uang yang dibayar
+    var uangBayar = parseFloat(uangBayarInput.value);
+
+    // Menghitung kembalian atau menampilkan pesan khusus
+    if (uangBayar < totalHarga) {
+      var kurang = totalHarga - uangBayar;
+      hasilBayarElement.textContent = 'Uang yang kurang: Rp ' + kurang.toLocaleString();
+    } else if (uangBayar > totalHarga) {
+      var kembalian = uangBayar - totalHarga;
+      hasilBayarElement.textContent = 'Kembalian: Rp ' + kembalian.toLocaleString();
+    } else {
+      hasilBayarElement.textContent = 'Pembayaran sukses';
+    }
+
+    // Menampilkan hasil bayar container
+    hasilBayarContainer.style.display = 'block';
+  });
+});
+
+
   document.addEventListener("DOMContentLoaded", function () {
     var addToCartButtons = document.querySelectorAll('.add-to-cart');
     var cardContainer = document.getElementById('card');
@@ -141,5 +177,51 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Menambahkan event listener untuk tautan
     toggleCardLink.addEventListener('click', toggleCardVisibility);
+  });
+  
+
+  // pembayaran
+  document.addEventListener("DOMContentLoaded", function () {
+    var cardContainer = document.getElementById('card');
+    var uangBayarInput = document.getElementById('uang-bayar');
+    var hitungKembalianButton = document.getElementById('hitung-kembalian');
+    var hasilBayarContainer = document.getElementById('hasil-bayar');
+    var hasilBayarElement = document.getElementById('hasil');
+  
+    hitungKembalianButton.addEventListener('click', function() {
+      // Memeriksa apakah input uang-bayar tidak kosong
+      if (uangBayarInput.value.trim() === '') {
+        alert('Mohon masukkan jumlah uang yang dibayar.');
+        return; // Keluar dari fungsi jika input kosong
+      }
+  
+      // Mengambil total harga dari keranjang
+      var totalHarga = 0;
+      var hargaProduk = cardContainer.querySelectorAll('#rp');
+      hargaProduk.forEach(function(harga) {
+        var hargaString = harga.textContent.replace('Rp ', '').replace(',', '');
+        totalHarga += parseInt(hargaString);
+      });
+  
+      // Mengambil jumlah uang yang dibayar
+      var uangBayar = parseFloat(uangBayarInput.value);
+  
+      // Menghitung kembalian atau menampilkan pesan khusus
+      if (uangBayar < totalHarga) {
+        var kurang = totalHarga - uangBayar;
+        hasilBayarElement.textContent = 'Uang yang kurang: Rp ' + kurang.toLocaleString();
+        hasilBayarElement.style.color = 'red'; // Teks berwarna merah
+        hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
+      } else if (uangBayar > totalHarga) {
+        var kembalian = uangBayar - totalHarga;
+        hasilBayarElement.textContent = 'Kembalian: Rp ' + kembalian.toLocaleString();
+        hasilBayarElement.style.color = 'green'; // Teks berwarna hijau
+        hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
+      } else {
+        hasilBayarElement.textContent = 'Pembayaran sukses';
+        hasilBayarElement.style.color = 'green'; // Teks berwarna hijau
+        hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
+      }
+    });
   });
   

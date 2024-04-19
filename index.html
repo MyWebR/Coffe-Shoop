@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-- header -->
-    <header>
+    <header id="header">
       <p>Menu</p>
     </header>
 
@@ -30,7 +30,7 @@
       <!-- end pencarian -->
 
       <!-- kategori barang -->
-      <div class="kategori-menu">
+      <div class="kategori-menu" id="menu">
         <div class="menu">
           <!-- start semua -->
           <div class="semua">
@@ -79,141 +79,243 @@
       <!-- Di sini kami menambahkan id "card" untuk elemen keranjang -->
 
       <!-- start produk -->
-      <!-- semua produk -->
       <div class="produk-semua" id="semua">
-        <!-- start minuman -->
-        <div class="produk-minuman" id="minuman">
-          <div class="pembungkus">
-               <div class="all-product" id="Lemon tea">
-                    <img src="product/minuman/lemon tea.png" alt="" />
-                    <p id="nama-product">Lemon Tea</p>
-                    <p id="rp">Rp 10.000</p>
-                    <!-- add-cart -->
-                    <div class="add-cart">
-                      <div></div>
-                      <a href="#" class="add-to-cart" data-product-id="Lemon tea">
-                        <img src="icon/navbar/plus-button.png" alt="" />
-                      </a>
+          <!-- start minuman -->
+          <div class="produk-minuman" id="minuman">
+            <div class="pembungkus">
+                 <div class="all-product" id="Lemon tea">
+                      <img src="product/minuman/lemon tea.png" alt="" />
+                      <p id="nama-product">Lemon Tea</p>
+                      <p id="rp">Rp 10,000</p>
+                      <!-- add-cart -->
+                      <div class="add-cart">
+                        <div></div>
+                        <a href="#" class="add-to-cart" data-product-id="Lemon tea">
+                          <img src="icon/navbar/plus-button.png" alt="" />
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="all-product" id="Grape Tea">
-                    <img src="product/minuman/grape tea.png" alt="" />
-                    <p id="nama-product">Grape Tea</p>
-                    <p id="rp">Rp 5.000</p>
-                    <!-- add-cart -->
-                    <div class="add-cart">
-                      <div></div>
-                      <a href="#" class="add-to-cart" data-product-id="Grape Tea"> <!-- Ubah nilai menjadi "GrapeTea" -->
-                        <img src="icon/navbar/plus-button.png" alt="" />
-                      </a>
+                    <div class="all-product" id="Grape Tea">
+                      <img src="product/minuman/grape tea.png" alt="" />
+                      <p id="nama-product">Grape Tea</p>
+                      <p id="rp">Rp 5,000</p>
+                      <!-- add-cart -->
+                      <div class="add-cart">
+                        <div></div>
+                        <a href="#" class="add-to-cart" data-product-id="Grape Tea"> <!-- Ubah nilai menjadi "GrapeTea" -->
+                          <img src="icon/navbar/plus-button.png" alt="" />
+                        </a>
+                      </div>
                     </div>
+            </div>
+            <!-- 2 -->
+            <div class="pembungkus">
+              <div class="all-product" id="Susu persik emas">
+                <img src="product/minuman/Susu Persik Emas.png" alt="" />
+                <p id="nama-product">Susu persik emas</p>
+                <p id="rp">Rp 5,000</p>
+                                    <div class="add-cart">
+                        <div></div>
+                        <a href="#" class="add-to-cart" data-product-id="Susu persik emas">
+                          <img src="icon/navbar/plus-button.png" alt="" />
+                        </a>
+                      </div>
+              </div>
+              <div class="all-product" id="Grape milk tea">
+                <img src="product/minuman/grape milk tea.png" alt="" />
+                <p id="nama-product">Grape milk tea</p>
+                <p id="rp">Rp 5,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Grape milk tea">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
                   </div>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="pembungkus" >
+              <div class="all-product" id="Strawbery milk tea">
+                <img src="product/minuman/straubery milk tea.png" alt="" />
+                <p id="nama-product">Strawbery milk tea</p>
+                <p id="rp">Rp 20,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Strawbery milk tea">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
+
+              <div class="all-product" id="Mint chocolate milk tea">
+                <img src="product/minuman/Mint Chocolate Milk Tea.png" alt="" />
+                <p id="nama-product">Mint chocolate milk tea</p>
+                <p id="rp">Rp 5,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Mint chocolate milk tea">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
+            </div>
           </div>
-          <!-- 2 -->
-          <div class="pembungkus">
-            <div class="all-product">
-              <img src="product/minuman/Susu Persik Emas.png" alt="" />
-              <p id="nama-product">Susu persik emas</p>
-              <p id="rp">Rp 5.000</p>
+          <!-- end minuman -->
+          <!-- start makanan -->
+          <div class="produk-makanan" id="makanan">
+            <!-- 1 -->
+            <div class="pembungkus">
+              <div class="all-product" id="Chicken fingers">
+                <img src="product/makanan/chicken fingers.jpg" alt="" />
+                <p id="nama-product">Chicken fingers</p>
+                <p id="rp">Rp 25,000</p>
+                <div class="add-cart">
+                    <div> </div>
+                    <a href="#" class="add-to-cart" data-product-id="Chicken fingers">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
+              <div class="all-product" id="Nacos">
+                <img src="product/makanan/nacos.jpg" alt="" />
+                <p id="nama-product">Nacos</p>
+                <p id="rp">Rp 20,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Nacos">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
             </div>
-            <div class="all-product">
-              <img src="product/minuman/grape milk tea.png" alt="" />
-              <p id="nama-product">Grape milk tea</p>
-              <p id="rp">Rp 5.000</p>
+            <!-- 2 -->
+            <div class="pembungkus">
+              <div class="all-product" id="Omlet">
+                <img src="product/makanan/omlet.jpg" alt="" />
+                <p id="nama-product">Omlet</p>
+                <p id="rp">Rp 20,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Omlet">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
+              <div class="all-product" id="Onion ring">
+                <img src="product/makanan/onion ring.jpg" alt="" />
+                <p id="nama-product">Onion ring</p>
+                <p id="rp">Rp 15,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Onion ring">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
+            </div>
+            <!-- 3 -->
+            <div class="pembungkus" id="Psiang goreng">
+              <div class="all-product">
+                <img src="product/makanan/pisang goreng.png" alt="" />
+                <p id="nama-product">Pisang goreng</p>
+                <p id="rp">Rp 10,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Pisang goreng">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
+              <div class="all-product" id="Roti bakar">
+                <img src="product/makanan/roti bakar.jpg" alt="" />
+                <p id="nama-product">Roti bakar</p>
+                <p id="rp">Rp 7,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Roti bakar">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
+            </div>
+            <!-- 4 -->
+            <div class="pembungkus">
+              <div class="all-product" id="Siomay">
+                <img src="product/makanan/siomay.jpg" alt="" />
+                <p id="nama-product">Siomay</p>
+                <p id="rp">Rp 10,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Siomay">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
+              <div class="all-product" id="Nasi putih">
+                <img src="product/makanan/nasi putih.jpg" alt="" />
+                <p id="nama-product">Nasi putih</p>
+                <p id="rp">Rp 5,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Nasi putih">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
             </div>
           </div>
-          <!-- 3 -->
-          <div class="pembungkus">
-            <div class="all-product">
-              <img src="product/minuman/straubery milk tea.png" alt="" />
-              <p id="nama-product">Strawbery milk tea</p>
-              <p id="rp">Rp 20.000</p>
-            </div>
-            <div class="all-product">
-              <img src="product/minuman/Mint Chocolate Milk Tea.png" alt="" />
-              <p id="nama-product">Mint chocolate milk tea</p>
-              <p id="rp">Rp 5.000</p>
+          <!--  end makanan -->
+          <!-- start snack -->
+          <div class="produk-snack" id="snack">
+            <!-- 1 -->
+            <div class="pembungkus">
+              <div class="all-product" id="Butttermilk waffle">
+                <img src="product/snack/buttermilk wffle.jpg" alt="" />
+                <p id="nama-product">Butttermilk waffle</p>
+                <p id="rp">Rp 20,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Butttermilk waffle">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
+              <div class="all-product" id="Kentang goreng saus keju">
+                <img src="product/snack/potato wedges.jpg " alt="" />
+                <p id="nama-product">Kentang goreng saus keju</p>
+                <p id="rp">Rp 20,000</p>
+                <div class="add-cart">
+                    <div></div>
+                    <a href="#" class="add-to-cart" data-product-id="Kentang goreng saus keju">
+                      <img src="icon/navbar/plus-button.png" alt="" />
+                    </a>
+                  </div>
+              </div>
             </div>
           </div>
+          <!-- end snack -->
         </div>
-        <!-- end minuman -->
-        <!-- start makanan -->
-        <div class="produk-makanan" id="makanan">
-          <!-- 1 -->
-          <div class="pembungkus">
-            <div class="all-product">
-              <img src="product/makanan/chicken fingers.jpg" alt="" />
-              <p id="nama-product">Chicken fingers</p>
-              <p id="rp">Rp 25.000</p>
-            </div>
-            <div class="all-product">
-              <img src="product/makanan/nacos.jpg" alt="" />
-              <p id="nama-product">Nacos</p>
-              <p id="rp">Rp 20.000</p>
-            </div>
-          </div>
-          <!-- 2 -->
-          <div class="pembungkus">
-            <div class="all-product">
-              <img src="product/makanan/omlet.jpg" alt="" />
-              <p id="nama-product">Omlet</p>
-              <p id="rp">Rp 20.000</p>
-            </div>
-            <div class="all-product">
-              <img src="product/makanan/onion ring.jpg" alt="" />
-              <p id="nama-product">Onion ring</p>
-              <p id="rp">Rp 15.000</p>
-            </div>
-          </div>
-          <!-- 3 -->
-          <div class="pembungkus">
-            <div class="all-product">
-              <img src="product/makanan/pisang goreng.png" alt="" />
-              <p id="nama-product">Pisang goreng</p>
-              <p id="rp">Rp 10.000</p>
-            </div>
-            <div class="all-product">
-              <img src="product/makanan/roti bakar.jpg" alt="" />
-              <p id="nama-product">Roti bakar</p>
-              <p id="rp">Rp 7.000</p>
-            </div>
-          </div>
-          <!-- 4 -->
-          <div class="pembungkus">
-            <div class="all-product">
-              <img src="product/makanan/siomay.jpg" alt="" />
-              <p id="nama-product">Siomay</p>
-              <p id="rp">Rp 10.000</p>
-            </div>
-            <div class="all-product">
-              <img src="product/makanan/nasi putih.jpg" alt="" />
-              <p id="nama-product">Nasi putih</p>
-              <p id="rp">Rp 5.000</p>
-            </div>
-          </div>
-        </div>
-        <!--  end makanan -->
-        <!-- start snack -->
-        <div class="produk-snack" id="snack">
-          <!-- 1 -->
-          <div class="pembungkus">
-            <div class="all-product">
-              <img src="product/snack/buttermilk wffle.jpg" alt="" />
-              <p id="nama-product">Butttermilk waffle</p>
-              <p id="rp">Rp 20.000</p>
-            </div>
-            <div class="all-product">
-              <img src="product/snack/potato wedges.jpg " alt="" />
-              <p id="nama-product">Kentang goreng saus</p>
-              <p id="rp">Rp 20.000</p>
-            </div>
-          </div>
-        </div>
-        <!-- end snack -->
-      </div>
+      <!-- semua produk -->
+
       <!-- end produk -->
 
-      <div id="card" style="display: none;"></div>
+      <!-- card -->
+      <div id="card" style="display: none;">
+          <hr>
+
+          <div id="bayar-container">
+               <label for="uang-bayar" required>Pembayaran</label>
+
+               <input type="number" id="uang-bayar" placeholder="Masukkan jumlah uang" required>
+               <button id="hitung-kembalian">Hitung Kembalian</button>
+             </div>
+             
+             <div id="hasil-bayar" style="display: none;">
+               <p id="hasil"></p>
+             </div>
+             <label for="keranjang" id="keranjang">Keranjang</label>
+
+     </div>
 
     <!-- space di bawah product -->
     <div class="space"></div>
