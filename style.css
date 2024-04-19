@@ -178,7 +178,25 @@ header p {
   margin-top: 0;
   font-size: 12px;
   margin-left: 10px;
-  padding-bottom: 10px;
+}
+
+.add-cart {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding-top: 0;
+     padding-right: 10px;
+     padding-bottom: 10px;
+}
+
+.add-cart div {
+     margin: 0;
+}
+
+.add-cart img {
+     border-bottom: none;
+     margin: 0;
+     height: 30px;
 }
 /* end minuman */
 
@@ -207,7 +225,7 @@ header p {
   justify-content: space-around;
   align-items: center;
   border-radius: 15px 15px 0 0;
-  background-color: #ffffff; /* Atur warna latar belakang sesuai kebutuhan */
+  background-color: #eff6ff; /* Atur warna latar belakang sesuai kebutuhan */
   box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Atur bayangan bawah sesuai kebutuhan */
 }
 
@@ -243,3 +261,14 @@ header p {
 .menu .snack.active {
   background-color: #e5e5e5;
 }
+
+/* card */
+#card {
+     display: flex;
+     gap: 10px; /* Jarak antara setiap produk */
+     align-items: center;
+     justify-content: space-around;
+   }
+   
+
+   

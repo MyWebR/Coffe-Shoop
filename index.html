@@ -75,22 +75,39 @@
       </div>
       <!-- end katedori barang -->
 
+      <!-- card -->
+      <!-- Di sini kami menambahkan id "card" untuk elemen keranjang -->
+
       <!-- start produk -->
       <!-- semua produk -->
       <div class="produk-semua" id="semua">
         <!-- start minuman -->
         <div class="produk-minuman" id="minuman">
           <div class="pembungkus">
-            <div class="all-product">
-              <img src="product/minuman/lemon tea.png" alt="" />
-              <p id="nama-product">Lemon Tea</p>
-              <p id="rp">Rp 5.000</p>
-            </div>
-            <div class="all-product">
-              <img src="product/minuman/grape tea.png" alt="" />
-              <p id="nama-product">Grape Tea</p>
-              <p id="rp">Rp 5.000</p>
-            </div>
+               <div class="all-product" id="Lemon tea">
+                    <img src="product/minuman/lemon tea.png" alt="" />
+                    <p id="nama-product">Lemon Tea</p>
+                    <p id="rp">Rp 10.000</p>
+                    <!-- add-cart -->
+                    <div class="add-cart">
+                      <div></div>
+                      <a href="#" class="add-to-cart" data-product-id="Lemon tea">
+                        <img src="icon/navbar/plus-button.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="all-product" id="Grape Tea">
+                    <img src="product/minuman/grape tea.png" alt="" />
+                    <p id="nama-product">Grape Tea</p>
+                    <p id="rp">Rp 5.000</p>
+                    <!-- add-cart -->
+                    <div class="add-cart">
+                      <div></div>
+                      <a href="#" class="add-to-cart" data-product-id="Grape Tea"> <!-- Ubah nilai menjadi "GrapeTea" -->
+                        <img src="icon/navbar/plus-button.png" alt="" />
+                      </a>
+                    </div>
+                  </div>
           </div>
           <!-- 2 -->
           <div class="pembungkus">
@@ -195,8 +212,10 @@
         <!-- end snack -->
       </div>
       <!-- end produk -->
-    </div>
 
+      <div id="card" style="display: none;"></div>
+
+    <!-- space di bawah product -->
     <div class="space"></div>
 
     <!-- start navbar -->
@@ -216,7 +235,7 @@
       <a href="">
         <img src="icon/navbar/dashboard.png" alt="" />
       </a>
-      <a href="">
+      <a href="#card" id="toggle-card">
         <img src="icon/navbar/cart.png" alt="" />
       </a>
     </div>
