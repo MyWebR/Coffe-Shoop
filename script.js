@@ -436,11 +436,11 @@ jumlahProduk--;
       if (cardDiv.style.display === 'none') {
         cardDiv.style.display = 'block';
         semuaDiv.style.display = 'none'; // Menyembunyikan elemen dengan ID "semua"
-        toggleCardIcon.src = 'icon/navbar/plus-button.png'; // Mengubah ikon menjadi "close.png"
+        toggleCardIcon.src = 'icon/navbar/plus-button.webm'; // Mengubah ikon menjadi "close.png"
       } else {
         cardDiv.style.display = 'none';
         semuaDiv.style.display = 'block'; // Menampilkan elemen dengan ID "semua"
-        toggleCardIcon.src = 'icon/navbar/cart.png'; // Mengembalikan ikon ke aslinya
+        toggleCardIcon.src = 'icon/navbar/cart.webm'; // Mengembalikan ikon ke aslinya
       }
     }
   
