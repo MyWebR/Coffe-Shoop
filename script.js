@@ -231,14 +231,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var toggleCardButton = document.getElementById('toggle-card');
     
     toggleCardButton.addEventListener('click', function() {
-      // Lakukan efek getar
-      toggleCardButton.style.animation = 'shake 0.5s';
-  
-      // Setel waktu tertentu untuk menghapus animasi getar
-      setTimeout(function() {
-        toggleCardButton.style.removeProperty('animation');
-      }, 500); // 0.5 detik
+      // Periksa apakah perangkat mendukung fitur getar
+      if ("vibrate" in navigator) {
+        // Getar perangkat selama 200ms
+        navigator.vibrate(200);
+      } else {
+        // Tampilkan pesan jika perangkat tidak mendukung getar
+        console.log("Perangkat Anda tidak mendukung fitur getar.");
+      }
     });
   });
-  
   
