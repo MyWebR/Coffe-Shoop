@@ -5,7 +5,62 @@ body {
   color: #1e40af;
 }
 
-/* header */
+/* header 1 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: auto;
+  background-color: #eff6ff;
+  padding: 0 15px 0 0;
+}
+
+
+.header img {
+  height: 20vh;
+  width: auto;
+}
+
+/* help menu */
+.help img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 12.5vh;
+}
+
+/* popup help */
+#popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang dengan opacity */
+  backdrop-filter: blur(5px); /* Efek blur pada latar belakang */
+  -webkit-backdrop-filter: blur(5px); /* Efek blur untuk browser yang mendukung prafiks WebKit */
+  z-index: 9999;
+}
+
+#video-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 20px;
+}
+
+#close-btn {
+  position: absolute;
+  top: 0px;
+  right: 24px;
+}
+
+
+
+/* header menu*/
 header {
   display: flex;
   align-items: center;
@@ -17,6 +72,7 @@ header {
 
 header p {
   font-size: 25px;
+  margin-top: -10;
   font-weight: 600;
 }
 
@@ -356,11 +412,11 @@ label {
 /* CSS untuk notifikasi jumlah produk */
 .jumlah-produk-notifikasi {
   position: absolute;
-  top: 2px;
-  right: 70px;
+  top: 3px;
+  right: 100px;
   background-color: red;
   color: white;
   font-size: 10px;
-  padding: 5px;
+  padding: 3px 7px 3px 7px;
   border-radius: 50%;
 }

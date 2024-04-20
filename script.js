@@ -524,3 +524,20 @@ jumlahProduk--;
     });
   });
   
+
+  // pop uo video help
+  document.addEventListener("DOMContentLoaded", function() {
+    var helpLink = document.getElementById('help-link');
+    var popupOverlay = document.getElementById('popup-overlay');
+    var closeButton = document.getElementById('close-btn');
+  
+    helpLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      popupOverlay.style.display = 'block';
+    });
+  
+    closeButton.addEventListener('click', function() {
+      popupOverlay.style.display = 'none';
+    });
+  });
+  
