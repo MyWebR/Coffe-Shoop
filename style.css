@@ -317,7 +317,6 @@ header p {
 }
 
 .navbar img {
-  opacity: 0.6;
   height: 35px;
 }
 
@@ -343,8 +342,6 @@ header p {
 .menu .snack.active {
   background-color: #e5e5e5;
 }
-
-
 
 /* card */
 #card {
@@ -396,10 +393,27 @@ label {
   padding: 10px;
   border-radius: 10px;
   background-color: #f1f5f9;
+  border: 1px solid;
+  border-color: #c6cbd1;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+
+.selesai {
+  margin-top: 10px;
+  width: max-content;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f1f5f9;
   margin-bottom: 50px;
   border: 1px solid;
   border-color: #c6cbd1;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+.selesai a {
+  text-decoration: none;
+  font-size: large;
+  color: #1e40af;
 }
 
 /* getar */
