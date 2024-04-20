@@ -527,6 +527,23 @@ jumlahProduk--;
       }
     });
   });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var addToCartButton = document.querySelector('.add-to-cart');
+    var originalIcon = addToCartButton.querySelector('img').src;
+    var shoppingIcon = 'animasi/shopping.gif'; // Ganti dengan lokasi gambar ikon belanja
+
+    addToCartButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        addToCartButton.querySelector('img').src = shoppingIcon;
+
+        // Setelah 2 detik, kembalikan gambar ke aslinya
+        setTimeout(function() {
+            addToCartButton.querySelector('img').src = originalIcon;
+        }, 2000);
+    });
+});
+
   
 
   // pop uo video help
