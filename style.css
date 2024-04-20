@@ -339,6 +339,7 @@ label {
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
 }
 
+/* getar */
 @keyframes shake {
   0% { transform: translateX(0); }
   25% { transform: translateX(-5px); }
@@ -349,4 +350,17 @@ label {
 
 .add-to-cart:focus {
   animation: shake 200ms ease-in-out;
+}
+
+/* card notif */
+/* CSS untuk notifikasi jumlah produk */
+.jumlah-produk-notifikasi {
+  position: absolute;
+  top: 2px;
+  right: 70px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
 }
