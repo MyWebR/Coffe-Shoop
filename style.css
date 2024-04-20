@@ -30,6 +30,13 @@ body {
 }
 
 /* popup help */
+#popup-overlay p {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+}
+
 #popup-overlay {
   display: none;
   position: fixed;
@@ -55,7 +62,7 @@ body {
 #close-btn {
   position: absolute;
   top: 0px;
-  right: 105px;
+  right: 5.5%;
 }
 
 
