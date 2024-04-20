@@ -12,29 +12,45 @@ hr {
   border-top: 2px solid #f1f5f9; /* Warna biru, sesuaikan dengan warna yang diinginkan */
 }
 
-
 /* header 1 */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%;
+  height: 50px;
   width: auto;
   background-color: #eff6ff;
-  padding: 0 15px 0 0;
+  padding: 5px 5px 0 0;
 }
 
+.logo {
+  background-color: #eff6ff;
+  height: 100%;
+  width: auto;
+}
 
-.header img {
+.name-market img {
+  margin-top: -50px;
+
   height: 20vh;
   width: auto;
+  margin-bottom: 0;
+}
+
+.container {
+  font-weight: 500;
+  color: #64748b;
+  margin-left: 15px;
+  margin-top: -40px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  padding-bottom: 50px;
 }
 
 /* help menu */
 .help img {
   height: 40px;
   width: auto;
-  margin-bottom: 12.5vh;
 }
 
 /* popup help */
@@ -52,9 +68,16 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang dengan opacity */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Warna latar belakang dengan opacity */
   backdrop-filter: blur(5px); /* Efek blur pada latar belakang */
-  -webkit-backdrop-filter: blur(5px); /* Efek blur untuk browser yang mendukung prafiks WebKit */
+  -webkit-backdrop-filter: blur(
+    5px
+  ); /* Efek blur untuk browser yang mendukung prafiks WebKit */
   z-index: 9999;
 }
 
@@ -72,8 +95,6 @@ hr {
   top: 0px;
   right: 10%;
 }
-
-
 
 /* header menu*/
 header {
@@ -101,7 +122,7 @@ header p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -35px;
+  margin-top: -50px;
 }
 
 #cari {
@@ -442,10 +463,7 @@ label {
   max-height: 100%;
 }
 
-
-
 /* getar */
-
 
 .add-to-cart:focus {
   animation: shake 200ms ease-in-out;
@@ -467,4 +485,3 @@ label {
 .title {
   margin-top: 30px;
 }
-

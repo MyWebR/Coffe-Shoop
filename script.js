@@ -1,3 +1,5 @@
+
+// menu
 document.addEventListener("DOMContentLoaded", function () {
      // Mengambil semua tautan kategori
      var kategoriLinks = document.querySelectorAll(".kategori-link");

@@ -11,6 +11,10 @@
       rel="stylesheet"
     />
     <!-- end font -->
+
+    <!-- link animasi ketik -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!--  -->
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <title>Coffe Shoop</title>
@@ -19,17 +23,27 @@
 
     <div class="header">
             <!-- nama toko -->
-            <div class="name-market">
-              <div class="logo">
-              <img src="icon/logo product/logo coffe.webm" alt="">
-              </div>
-            </div>
+          <div></div>
             <div class="help">
               <a href="#" id="help-link">
                 <img src="icon/navbar/help.webm" alt="Help">
               </a>
             </div>
     </div>
+
+    <div class="logo">
+      <div class="name-market">
+        <div class="logo">
+        <img src="icon/logo product/logo coffe.webm" alt="">
+        </div>
+      </div>
+  
+      <div class="container">
+        <div class="mengetik">Selamat Datang, <span class="typing"></span></div>
+      </div>
+    </div>
+
+
 
 <!-- popup help -->
 <div id="popup-overlay">
@@ -383,5 +397,19 @@
       
     </div>
     <!-- end navbar -->
+
+    <!-- animasi ketik -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        const mengetik = new Typed(".typing", {
+          strings: ["Di ecoffe", "Silahkan pilih pesanan anda", "Mau minum?", "Ada!!", "Apa makan?", "Ada jugaaaaa", "Snack juga ada lhoooo..."],
+          typeSpeed: 100,
+          backSpeed: 50,
+          loop: true
+        });
+      });
+    </script>
+
   </body>
 </html>
