@@ -338,8 +338,9 @@
           <!-- end snack -->
         </div>
       <!-- semua produk -->
-
       <!-- end produk -->
+
+      <!-- Struktur popup struk -->
 
       <!-- card -->
       <div id="card" style="display: none;">
@@ -348,14 +349,34 @@
           <div id="bayar-container">
                <label for="uang-bayar" required>Pembayaran</label>
 
-               <input type="number" id="uang-bayar" placeholder="Masukkan jumlah uang" required>
+               <input type="number" id="uang-bayar" placeholder="Masukkan jumlah uang" pattern="[0-9]*" required>
+
                <button id="hitung-kembalian">Hitung Kembalian</button>
              </div>
              
              <div id="hasil-bayar" style="display: none;">
-               <p id="hasil"></p>
-               <div class="selesai">
-                <a href="#" id="selesaiButton">Selesai</a>
+              <!-- hasil total -->
+              <p id="hasil"></p>
+              <div class="btn">
+              <!-- selesai -->
+                <div class="selesai">
+                 <a href="#" id="selesaiButton">Selesai</a>
+                 <div class="animasi" id="loadingImage"  style="display: none;">
+                 <img src="animasi/Check mark animation.gif" />
+                 </div>
+               </div>
+               <!-- cetak -->
+               <div class="cetak">
+                <a href="#" id="cetakButton">Cetak</a>
+                <div class="animasi" id="loadingImage"  style="display: none;">
+                <img src="animasi/Check mark animation.gif" />
+                </div>
+              </div>
+              </div>
+
+
+              <div class="batal">
+                <a href="#" id="batalButton">Batal</a>
                 <div class="animasi" id="loadingImage"  style="display: none;">
                 <img src="animasi/Check mark animation.gif" />
                 </div>

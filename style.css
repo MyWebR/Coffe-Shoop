@@ -427,22 +427,67 @@ label {
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
 }
 
+/* pembungkus btn selesai dan cetak */
+.btn {
+  display: flex;
+}
+
+/* btn selesai */
 .selesai {
   margin-top: 10px;
   width: max-content;
   font-weight: 600;
   padding: 10px;
   border-radius: 10px;
-  background-color: #f1f5f9;
+  background-color: #34d399;
   margin-bottom: 50px;
   border: 1px solid;
-  border-color: #c6cbd1;
+  border-color: #059669;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
 }
 .selesai a {
   text-decoration: none;
   font-size: large;
-  color: #1e40af;
+  color: white;
+}
+
+/* btn cetak */
+.cetak {
+  margin-top: 10px;
+  width: max-content;
+  margin-left: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #facc15;
+  margin-bottom: 50px;
+  border: 1px solid;
+  border-color: #ca8a04;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+.cetak a {
+  text-decoration: none;
+  font-size: large;
+  color: white;
+}
+
+/* btn batal */
+.batal{
+  margin-top: 10px;
+  width: max-content;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fb7185;
+  margin-bottom: 50px;
+  border: 1px solid;
+  border-color: #e11d48;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
+}
+.batal a {
+  text-decoration: none;
+  font-size: large;
+  color: white;
 }
 
 .animasi {

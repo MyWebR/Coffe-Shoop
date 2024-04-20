@@ -299,9 +299,6 @@ jumlahProduk--;
   }
 }
 
-
-
-
   // Tambahkan event listener pada setiap tombol "Add to Cart"
   var addToCartButtons = document.querySelectorAll('.add-to-cart');
   addToCartButtons.forEach(function(button) {
@@ -382,7 +379,7 @@ jumlahProduk--;
   // });
   
 
-
+// menambahkan produk ke keranjang
   document.addEventListener("DOMContentLoaded", function () {
     var addToCartButtons = document.querySelectorAll('.add-to-cart');
     var cardContainer = document.getElementById('card');
@@ -459,44 +456,56 @@ jumlahProduk--;
     var hitungKembalianButton = document.getElementById('hitung-kembalian');
     var hasilBayarContainer = document.getElementById('hasil-bayar');
     var hasilBayarElement = document.getElementById('hasil');
-  
-    hitungKembalianButton.addEventListener('click', function() {
-      // Memeriksa apakah input uang-bayar tidak kosong
-      if (uangBayarInput.value.trim() === '') {
-        alert('Mohon masukkan jumlah uang yang dibayar.');
-        return; // Keluar dari fungsi jika input kosong
-      }
-  
-      // Mengambil total harga dari keranjang
-      var totalHarga = 0;
-      var hargaProduk = cardContainer.querySelectorAll('#rp');
-      hargaProduk.forEach(function(harga) {
-        var hargaString = harga.textContent.replace('Rp ', '').replace(',', '');
-        totalHarga += parseInt(hargaString);
-      });
-  
-      // Mengambil jumlah uang yang dibayar
-      var uangBayar = parseFloat(uangBayarInput.value);
-  
-      // Menghitung kembalian atau menampilkan pesan khusus
-      if (uangBayar < totalHarga) {
-        var kurang = totalHarga - uangBayar;
-        hasilBayarElement.textContent = 'Uang yang kurang: Rp ' + kurang.toLocaleString();
-        hasilBayarElement.style.color = 'red'; // Teks berwarna merah
-        hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
-      } else if (uangBayar > totalHarga) {
-        var kembalian = uangBayar - totalHarga;
-        hasilBayarElement.textContent = 'Kembalian: Rp ' + kembalian.toLocaleString();
-        hasilBayarElement.style.color = 'green'; // Teks berwarna hijau
-        hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
-      } else {
-        hasilBayarElement.innerHTML = 'Pembayaran sukses <br> Pesanan Segera Diantar';
+    var selesaiButton = document.querySelector('.selesai');
+    var batalButton = document.querySelector('.batal'); // Menambahkan variabel untuk tombol "Batal"
+    var cetakButton = document.querySelector('.cetak');
 
-        hasilBayarElement.style.color = 'green'; // Teks berwarna hijau
-        hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
-      }
+    hitungKembalianButton.addEventListener('click', function() {
+        // Memeriksa apakah input uang-bayar tidak kosong
+        if (uangBayarInput.value.trim() === '') {
+            alert('Mohon masukkan jumlah uang yang dibayar.');
+            return; // Keluar dari fungsi jika input kosong
+        }
+
+        // Mengambil total harga dari keranjang
+        var totalHarga = 0;
+        var hargaProduk = cardContainer.querySelectorAll('#rp');
+        hargaProduk.forEach(function(harga) {
+            var hargaString = harga.textContent.replace('Rp ', '').replace(',', '');
+            totalHarga += parseInt(hargaString);
+        });
+
+        // Mengambil jumlah uang yang dibayar
+        var uangBayar = parseFloat(uangBayarInput.value);
+
+        // Menghitung kembalian atau menampilkan pesan khusus
+        if (uangBayar < totalHarga) {
+            var kurang = totalHarga - uangBayar;
+            hasilBayarElement.textContent = 'Uang yang kurang: Rp ' + kurang.toLocaleString();
+            hasilBayarElement.style.color = 'red'; // Teks berwarna merah
+            hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
+            cetakButton.style.display = 'none'; // menyembunyikan tombol cetak
+            selesaiButton.style.display = 'none'; // Menyembunyikan tombol selesai
+            batalButton.style.display = 'block'; // Menampilkan tombol batal
+        } else if (uangBayar > totalHarga) {
+            var kembalian = uangBayar - totalHarga;
+            hasilBayarElement.textContent = 'Kembalian: Rp ' + kembalian.toLocaleString();
+            hasilBayarElement.style.color = 'green'; // Teks berwarna hijau
+            hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
+            selesaiButton.style.display = 'block'; // Menampilkan tombol selesai
+            cetakButton.style.display = 'block'; // menampilkan tombbol cetak
+            batalButton.style.display = 'none'; // Menyembunyikan tombol batal
+        } else {
+            hasilBayarElement.innerHTML = 'Pembayaran sukses <br> Pesanan Segera Diantar';
+            hasilBayarElement.style.color = 'green'; // Teks berwarna hijau
+            hasilBayarContainer.style.display = 'block'; // Menampilkan hasil bayar container
+            selesaiButton.style.display = 'block'; // Menampilkan tombol selesai
+            batalButton.style.display = 'none'; // Menyembunyikan tombol batal
+        }
     });
-  });
+});
+
+
 
   // efek getar saat klik keranjang
   document.addEventListener("DOMContentLoaded", function() {
@@ -567,10 +576,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-
-
-  
-
   // pop uo video help
   document.addEventListener("DOMContentLoaded", function() {
     var helpLink = document.getElementById('help-link');
@@ -602,3 +607,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   
+
+  // batal btn to index html
+  document.addEventListener("DOMContentLoaded", function () {
+    var selesaiButton = document.getElementById('batalButton');
+
+    // Tambahkan event listener untuk tautan
+    selesaiButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Mencegah tindakan default dari tautan
+        window.location.href = 'index.html'; // Mengarahkan browser ke index.html
+    });
+});
+
+
+// popup struct
