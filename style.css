@@ -1,3 +1,11 @@
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-5px, 0); }
+  50% { transform: translate(5px, 0); }
+  75% { transform: translate(-5px, 0); }
+  100% { transform: translate(5px, 0); }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -280,6 +288,8 @@ header p {
 .menu .snack.active {
   background-color: #e5e5e5;
 }
+
+
 
 /* card */
 #card {

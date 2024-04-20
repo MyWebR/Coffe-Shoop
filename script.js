@@ -225,4 +225,20 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // efek getar saat memasukan produk ke keranjang
+  document.addEventListener("DOMContentLoaded", function() {
+    var toggleCardButton = document.getElementById('toggle-card');
+    
+    toggleCardButton.addEventListener('click', function() {
+      // Lakukan efek getar
+      toggleCardButton.style.animation = 'shake 0.5s';
+  
+      // Setel waktu tertentu untuk menghapus animasi getar
+      setTimeout(function() {
+        toggleCardButton.style.removeProperty('animation');
+      }, 500); // 0.5 detik
+    });
+  });
+  
   
