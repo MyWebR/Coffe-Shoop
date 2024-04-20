@@ -545,3 +545,18 @@ jumlahProduk--;
     });
   });
   
+  // animasi selesai
+  document.addEventListener("DOMContentLoaded", function() {
+    var selesaiButton = document.getElementById('selesaiButton');
+    var loadingImage = document.getElementById('loadingImage');
+  
+    selesaiButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      loadingImage.style.display = 'flex';
+  
+      setTimeout(function() {
+        window.location.href = 'index.html'; // Mengalihkan ke halaman index.html setelah 2 detik
+      }, 4000);
+    });
+  });
+  
