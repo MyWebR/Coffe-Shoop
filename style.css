@@ -338,3 +338,15 @@ label {
   border-color: #c6cbd1;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1);
 }
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.add-to-cart:focus {
+  animation: shake 200ms ease-in-out;
+}

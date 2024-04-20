@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // efek getar saat memasukan produk ke keranjang
+  // efek getar saat klik keranjang
   document.addEventListener("DOMContentLoaded", function() {
     var toggleCardButton = document.getElementById('toggle-card');
     
@@ -234,7 +234,23 @@ document.addEventListener("DOMContentLoaded", function () {
       // Periksa apakah perangkat mendukung fitur getar
       if ("vibrate" in navigator) {
         // Getar perangkat selama 200ms
-        navigator.vibrate(200);
+        navigator.vibrate(500);
+      } else {
+        // Tampilkan pesan jika perangkat tidak mendukung getar
+        console.log("Perangkat Anda tidak mendukung fitur getar.");
+      }
+    });
+  });
+  
+  // getar di add to card
+  document.addEventListener("DOMContentLoaded", function() {
+    var toggleCardButton = document.getElementById('add-to-card');
+    
+    toggleCardButton.addEventListener('click', function() {
+      // Periksa apakah perangkat mendukung fitur getar
+      if ("vibrate" in navigator) {
+        // Getar perangkat selama 200ms
+        navigator.vibrate(500);
       } else {
         // Tampilkan pesan jika perangkat tidak mendukung getar
         console.log("Perangkat Anda tidak mendukung fitur getar.");
