@@ -528,21 +528,44 @@ jumlahProduk--;
     });
   });
 
-  document.addEventListener("DOMContentLoaded", function() {
-    var addToCartButton = document.querySelector('.add-to-cart');
-    var originalIcon = addToCartButton.querySelector('img').src;
-    var shoppingIcon = 'animasi/shopping.gif'; // Ganti dengan lokasi gambar ikon belanja
 
-    addToCartButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        addToCartButton.querySelector('img').src = shoppingIcon;
+// animasi keranjang di produk
+document.addEventListener("DOMContentLoaded", function() {
+  var isAnimating = false; // Menyimpan status animasi
 
-        // Setelah 2 detik, kembalikan gambar ke aslinya
-        setTimeout(function() {
-            addToCartButton.querySelector('img').src = originalIcon;
-        }, 2000);
-    });
+  var addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+  addToCartButtons.forEach(function(button) {
+      var originalIcon = button.querySelector('img').src;
+      var shoppingIcon = 'animasi/grocery.gif'; // Ganti dengan lokasi gambar ikon belanja
+
+      button.addEventListener('click', function(event) {
+          event.preventDefault();
+
+          // Jika animasi sedang berlangsung, maka tidak lakukan apa-apa
+          if (isAnimating) {
+              return;
+          }
+
+          isAnimating = true; // Mengatur status animasi menjadi true
+          
+          var imgElement = button.querySelector('img');
+          imgElement.src = shoppingIcon;
+          imgElement.style.width = '35px'; // Contoh: Mengatur lebar gambar menjadi 35px
+          imgElement.style.height = '35px'; // Contoh: Mengatur tinggi gambar menjadi 35px
+
+          // Setelah 2 detik, kembalikan gambar ke aslinya dan atur status animasi menjadi false
+          setTimeout(function() {
+              imgElement.src = originalIcon;
+              imgElement.style.width = ''; // Menghapus lebar yang ditetapkan
+              imgElement.style.height = ''; // Menghapus tinggi yang ditetapkan
+              isAnimating = false; // Mengatur status animasi menjadi false
+          }, 2900);
+      });
+  });
 });
+
+
 
   
 
